@@ -1,0 +1,8 @@
+export CC='gcc -m32'
+export CXX='g++ -m32 -fpermissive'
+export CXXFLAGS='-pg -g -O3 -L/misc/scratch/rthakur/soc/lab1/drm-1.2.4-fxp/faad2/libfaad/.libs -I/misc/scratch/rthakur/soc/lab1/drm-1.2.4-fxp/faad2/include'
+cd faad2
+./configure --with-drm
+make
+cd ..
+./configure --without-qtgui --disable-sound --disable-alsa --disable-simulation --without-pic  --disable-dependency-tracking  --without-faac
